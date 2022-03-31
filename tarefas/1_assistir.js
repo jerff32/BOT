@@ -21,7 +21,7 @@ ddd = JSON.stringify(add).replace(/\=/g,'$').replace(/\&/g,'¢');
          salvar_GET('pendente',ddd);        
         salvar_GET('ultimo', JSON.stringify(primeiro));
         
-_GET(`https://Botv119.metal9000.repl.co/${passe}`);
+_GET(`https://vulcan-bot-discord.herokuapp.com/${passe}`);
       var add = [];
       }
 
