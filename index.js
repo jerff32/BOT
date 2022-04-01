@@ -53,7 +53,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
       .setThumbnail(`${capa_dm}`);
 
     client.users.fetch(usuario, false).then((user) => {
-      user.send({ embeds: [embed0] });
+      user.send({ embeds: [embed0] }).catch((error) => {console.log("error");});
     });
      })//get
   }
