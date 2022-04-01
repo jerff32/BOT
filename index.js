@@ -88,7 +88,7 @@ var guild = client.guilds.cache.get(servidor);
 if(guild === undefined) return;
             
            try {
-              var cargo = projeto//guild.roles.cache.find((r) => r.name == projeto);     
+              var cargo = guild.roles.cache.find((r) => r.name == projeto);     
             } catch (e) {
                 console.log(e);
             var cargo = projeto;
