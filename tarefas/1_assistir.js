@@ -15,12 +15,12 @@ var pri = false;
       } // for
       if (pri) {
   var ddd = JSON.stringify(add).replace(/\=/g,'$').replace(/\&/g,'¢');
-console.log(ddd);
+//console.log(ddd);
         salvar_GET('pendente',ddd);        
-setTimeout(() => {   
+//setTimeout(() => {   
       salvar_GET('ultimo', JSON.stringify({ "ultimo_post": add[0].hora }));
       _GET(`https://vulcan-bot-discord.herokuapp.com/${passe}`); 
-},3000);
+//},3000);
 
       }
 
@@ -32,4 +32,4 @@ assistir();
 
 setInterval(() => {
   assistir();
-}, 30000);
+}, 28000);
