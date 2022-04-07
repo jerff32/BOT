@@ -15,7 +15,7 @@ var pri = false;
       } // for
       if (pri) {
   var ddd = JSON.stringify(add).replace(/\=/g,'$').replace(/\&/g,'¢');
-
+console.log(ddd);
         salvar_GET('pendente',ddd);        
 setTimeout(() => {   
       salvar_GET('ultimo', JSON.stringify({ "ultimo_post": add[0].hora }));
