@@ -6,22 +6,25 @@ var assistir = function() {
 var ultimo_post = ultimo.ultimo_post;
     _GET("https://vulcannovel.com.br/wp-json/api/v1/recentes").then(vulcan => {
     var add = [];
-      primeiro = false;
+     
 if(vulcan[0].projeto == 'Erro 404') return
-
-      for (var v = 0; v < 5; v++) {
+var pri = false;
+      for (var v = 0; v < vulcan.length; v++) {         
         if (ultimo_post < vulcan[v].hora) {
-       primeiro = true;
-          add.push(vulcan[v]); 
-        } // if
-} // for
-      if (primeiro) {
+           add.push(vulcan[v]);  
+          var pri = true;
+                } // if
+      } // for
+      if (pri) {
         primeiro = { "ultimo_post": add[0].hora };
-ddd = JSON.stringify(add).replace(/\=/g,'$').replace(/\&/g,'¢');
-         salvar_GET('pendente',ddd);        
-        salvar_GET('ultimo', JSON.stringify(primeiro));
+var ddd = JSON.stringify(add).replace(/\=/g,'$').replace(/\&/g,'¢');
+        salvar_GET('pendente',ddd);        
+setTimeout(() => {   
+      salvar_GET('ultimo', JSON.stringify(primeiro));
+      _GET(`https://vulcan-bot-discord.herokuapp.com/${passe}`); 
+},1000);
+
         
-_GET(`https://vulcan-bot-discord.herokuapp.com/${passe}`);
       var add = [];
       }
 
@@ -33,4 +36,4 @@ assistir();
 
 setInterval(() => {
   assistir();
-}, 30000);
+}, 28000);
