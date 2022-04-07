@@ -70,7 +70,7 @@ app.get("/", (req, res) => {
 var Invocar = function(){
   
   usa_GET('pendente').then(ultimo => {
-     try{ ultimo.reverse();}catch(e){console.log(e)}
+  //   try{ ultimo.reverse();}catch(e){console.log(e)}
 var x = 0;
 var trampando = function() {
 
