@@ -150,7 +150,7 @@ if(guild === undefined) return;
                   .replace(/\=/g,'$')
                   .replace(/\&/g,'¢')
                 .replace('\u2014','--')
-                  .replace(/\?/g,'£');
+                  .replace(/\#/g,'£');
          
               salvar_GET('tabela',m);                
              }
