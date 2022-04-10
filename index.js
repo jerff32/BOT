@@ -149,7 +149,7 @@ if(guild === undefined) return;
                 var m = JSON.stringify(juntando,null,0)
                   .replace(/\=/g,'$')
                   .replace(/\&/g,'¢')
-                  .replace(/\#/g,'£');
+                  .replace(/\?/g,'£');
          
               salvar_GET('tabela',m);                
              }
