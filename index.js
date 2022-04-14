@@ -84,14 +84,12 @@ var trampando = function() {
             projeto = ultimo[x].projeto;
 var guild = client.guilds.cache.get(servidor);
             
-if(guild === undefined) return;
-            
-           try {
-              var cargo = guild.roles.cache.find((r) => r.name == projeto);     
-            } catch (e) {
-                console.log(e);
-            var cargo = projeto;
-            }
+if(guild === undefined) return;            
+    
+            var cargo = guild.roles.cache.find((r) => r.name == projeto);     
+
+            if(cargo == undefined)var cargo = projeto;
+         
             
             ut = ultimo[x].terra;
             if (ut == 'br') cor = '#56e757';
