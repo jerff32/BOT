@@ -111,7 +111,8 @@ if(guild === undefined) return;
             avatar = ultimo[x].avatar;
             capa = ultimo[x].capa;
             funcao = ultimo[x].funcao;
-
+if(!capa)capa='';
+if(!funcao)funcao = "Erro404";
            const embed = new MessageEmbed()
               .setColor(cor)
               .setAuthor({
